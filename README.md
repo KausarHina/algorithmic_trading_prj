@@ -28,8 +28,26 @@ The freqtrade installation steps for Mac M1 chip are available in **freqtrade_Ma
 
 To use the **algorithmic_trading_prj**  analyse / decide the best strategy and run it through freqtrade bot
 
-![freqtrade dashboard ](Images/freqtrade_dashboard.png)
 
+```python
+
+   1) freqtrade command to download data :
+
+   freqtrade download-data --exchange binanceus --pairs ETH/USDT XRP/USDT BTC/USDT ADA/USDT SOL/USDT INCH/USDT ALGO/USDT --prepend --timerange  20221201-20230112 --timeframe 3m
+
+   2) freqtrade command for backtesting :
+
+   freqtrade backtesting --strategy SampleStrategy --config config_backtesting.json
+
+   3) freqtrade command to start the bot with backtested strategy :
+
+  freqtrade trade --config config.json --strategy SampleStrategy
+
+```
+
+![freqtrade backtesting output ](Images/backtesting_output.png)
+
+![freqtrade dashboard ](Images/freqtrade_dashboard.png)
 
 ---
 ## Questions to Answer
