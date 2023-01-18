@@ -37,17 +37,17 @@ To use the **algorithmic_trading_prj**  analyse / decide the best strategy and r
 
    2) freqtrade command for backtesting :
 
-   freqtrade backtesting --strategy SampleStrategy --config config_backtesting.json
+   freqtrade backtesting --strategy SimpleMA_strategy --timerange 20221211-20230111 --config config_backtesting.json --timeframe 5m
 
    3) freqtrade command to start the bot with backtested strategy :
 
-  freqtrade trade --config config.json --strategy SampleStrategy
+   freqtrade trade --config config.json --strategy SimpleMA_strategy
 
 ```
 
 ![freqtrade backtesting output ](Images/backtesting_output.png)
 
-![freqtrade dashboard ](Images/freqtrade_dashboard.png)
+![freqtrade with SimpleMA_strategy](Images/freqtrade_with_SimpleMA_strategy.png)
 
 ---
 ## Questions to Answer
