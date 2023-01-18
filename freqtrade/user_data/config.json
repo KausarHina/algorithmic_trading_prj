@@ -74,11 +74,11 @@
     "api_server": {
         "enabled": true,
         "listen_ip_address": "127.0.0.1",
-        "listen_port": 8090,
+        "listen_port": 8081,
         "verbosity": "error",
         "enable_openapi": false,
-        "jwt_secret_key": "a90a5066723b847f961e3b6f8f5040d71f3ae2e4345022e2a4765142e1ed31c0",
-        "ws_token": "SY6A_GtXaPU9DmHmGg2wVaoas2il2iusew",
+        "jwt_secret_key": "0d180bef8fc5fabc8ec81b42c85f5a6b5b334c121f553037b65011e844a77bc1",
+        "ws_token": "7fCASNDGRVmptgICBmDzl-CL7ZjVxIDh0Q",
         "CORS_origins": [],
         "username": "freqtrader",
         "password": "fariha12"
