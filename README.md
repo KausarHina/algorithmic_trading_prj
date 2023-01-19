@@ -1,9 +1,15 @@
 # algorithmic_trading_prj
 
-The goal of this project is to show the time leveraging effect of using an exsiting 'sandbox' trading platform for testing strategies, machine learning models, backtesting and visualization vs doing all of the work in Jupyter Lab/VS Code.
+This project focuses on using machine learning to optimize trading strategies for crypto currency pairs using Jupiter Lab then deploys it on Freqtrade, a free and open source crypto trading bot. 
 
-We are plannning to choose 2 trading strategies and test them on the same data in 3 different machine learning models using Jupyter lab to find the model and strategy with the best return (will include backtesting and evaluation metrics and visualizations of results). The same strategies will be configured into the online trading bot FreqTrade using its commands to show the versatility and configuration options that are availble to traders with knowledge of python coding, financial strategies, and machine learning.
 
+*Target Goal*
+Identify the best of 2 trading strategies to use with Bitcoin data, and trial 3 machine learning classifier models for best predictive performance. 
+Demonstrate the advantages and disadvantages of using an online, open source crypto trading bot for deploying and backtesting one of the strategies. 
+
+We choose 'Exponential Moving Average Crossover' and 'Simple Moving Average/Relative Strength Index/Bollinger Bands' to analyze in this project. The strategies were coded into Jupyter Notebooks using Python.  These strategies were then run using BTC/USD data from January 2019 until January 2023. The actual returns were compared with the strategy produced returns, and the strategy was then optimized for best performance.  The OHLCV coin data and strategy indicators were separated into training and testing data sets before being run through 3 univariate classification models, Support Vector Classifier, RandomForest Classifier, and k Nearest Neighbor Classifier. The models were evaluated and backtested, before a final analysis of best strategy and optimal model was chosen.
+
+One of the strategies was used in the open source, online crypto trading bot Freqtrade. The strategy could then easily be papertraded, backtested and modified. Freqtrade also allows easy access to crypto coin data, strategy options, AI model options, and backtesting options that can be configured by the user in Python. The integrated WebUI in the bot makes visualization of the strategy easy.
 
 ## Technologies
 
@@ -21,6 +27,22 @@ Follow the instructions to install and run freqtrade bot on your machine as per 
 
 The freqtrade installation steps for Mac M1 chip are available in **freqtrade_MacOS_M1_Installation.pdf**.
 
+
+Before running the application on Jupiter Lab first install the dependencies in conda dev environment.
+
+```python
+
+    conda create -n dev python=3.7 anaconda
+
+    python -m ipykernel install --user --name dev
+
+    conda activate dev
+
+    pip install -r requirements.txt
+
+    conda deactivate 
+  
+```
 ---
 
 
@@ -54,7 +76,8 @@ To use the **algorithmic_trading_prj**  analyse / decide the best strategy and r
 
 ```python
 
-    1) which strategy should be used to run the frqtrade bot ?
+    1) which trade strategy is best for predicting BTC/USD ?
+    2) which machine learning classifier predicts the most accurate buy/sell signals ?
 
 ```
 
@@ -62,7 +85,9 @@ To use the **algorithmic_trading_prj**  analyse / decide the best strategy and r
 ## Research Resources/Datasets
 
 ```python
-
+    
+    https://www.cryptodatadownload.com/   for historical coin csv files
+    
     Try different ML models in Jupyter lab and decide the best strategy
     Perform backtesting for proposed strategy in Jupyter lab 
     FreqAI - with different ML models
